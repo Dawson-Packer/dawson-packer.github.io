@@ -1,0 +1,68 @@
+body {
+    background-color: whitesmoke;
+    /* background-image: url("../images/picture1.JPG") */
+}
+
+h1.title {
+    color: white;
+    margin: 10px 10px 0px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: left;
+}
+
+h1.subtitle {
+    color: rgb(207, 207, 207);
+    margin: 0px 10px 10px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: larger;
+    text-align: left;
+}
+
+p1 {
+    color: white;
+    margin: 0px 0px 0px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-align: left;
+}
+
+p.insert_box {
+    color: white;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-align: left;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 5px;
+    padding: 10px 10px 10px 10px
+
+}
+
+div.gallery {
+    margin: 10px 10px 10px 10px;
+    border: 0px;
+    float: left;
+    width: 180px;
+}
+
+div.gallery:hover {
+    width:179px;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+
+}
