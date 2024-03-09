@@ -1,0 +1,22 @@
+{
+  "name": "dawson-packer.github.io",
+  "version": "1.0.0",
+  "description": "Personal website for Dawson Packer",
+  "main": "index.js",
+  "scripts": {
+    "test": "devtest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dawson-Packer/dawson-packer.github.io.git"
+  },
+  "author": "Dawson Packer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dawson-Packer/dawson-packer.github.io/issues"
+  },
+  "homepage": "https://github.com/Dawson-Packer/dawson-packer.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
