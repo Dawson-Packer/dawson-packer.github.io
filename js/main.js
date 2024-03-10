@@ -18,18 +18,62 @@ async function booting_text() {
 
 async function setup() {
 
-
+    let console_paragraph = document.getElementById("console_paragraph");
+    console_paragraph.innerHTML = "";
+    let background = document.getElementById("background");
+    background.innerHTML = ".――[ DAWS v0.1 ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――.<br>" +
+                           "|  Logged in as USER with permission level 1                                          |<br>" +
+                           "|―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――|<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "|                                                                                     |<br>" +
+                           "'―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――'"
+    
 }
 
 
 
 
-function main() {
+async function main() {
 
 
     console.log("hello world!")
-    booting_text();
-
+    await booting_text();
+    await setup();
 }
 
 main();

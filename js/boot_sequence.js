@@ -22,20 +22,24 @@ export async function boot_text(element) {
     append_to_element(element, "<br>Executing start-up tasks in order of priority");
     await delay(700);
     append_to_element(element, "<br>Checking priority buses for connections");
-    await delay(300);
-    append_to_element(element, "<br>PORT0 > Failed to respond<br>");
-    await delay(300);
-    append_to_element(element, "<br>PORT1 > Failed to respond<br>");
-    await delay(500);
-    append_to_element(element, "<br>PORT2 > Failed to respond<br>");
-    await delay(200);
-    append_to_element(element, "<br>System running. Loading main gui");
-    await delay(200);
-    append_to_element(element, "<br>Starting file viewer manager");
-    append_to_element(element, "<br>[");
-    await delay(10);
-    let loading_bar = "[                                                  ]";
-    append_to_element(element, "==");
+    await delay(800);
+    // append_to_element(element, "<br>PORT0 > Failed to respond<br>");
+    // await delay(300);
+    // append_to_element(element, "<br>PORT1 > Failed to respond<br>");
+    // await delay(500);
+    // append_to_element(element, "<br>PORT2 > Failed to respond<br>");
+    // await delay(200);
+    // append_to_element(element, "<br>System running. Loading main gui");
+    // await delay(200);
+    // append_to_element(element, "<br>Starting file viewer manager");
+    // append_to_element(element, "<br>[");
+    // await delay(10);
+    // let loading_bar = "[                                                  ]";
+    // append_to_element(element, "==");
+    append_to_element(element, "<br>System running. Runnings tasks in startup directory. . .");
+    await delay(400);
+    append_to_element(element, "<br>Starting file manager. . .");
+    await delay(1000);
 
 
     

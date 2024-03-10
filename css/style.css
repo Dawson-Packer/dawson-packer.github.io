@@ -4,101 +4,70 @@ body {
     background-color: black;
 }
 
+.main_window {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+}
+
 div.console {
     text-align: left;
     font-size: large;
     color: #d4d7e2;
     font-weight: 800;
     font-family: monospace;
-    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
+    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9;
 }
 
-td.main {
+.main_window .background {
     color: #d4d7e2;
     font-size: large;
     font-weight: 600;
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
-
+    grid-area: 1 / 1;
 }
 
-td.sidebar {
+.main_window .content {
+    grid-area: 1 / 1;
+}
+
+.main_window .content .content_grid {
+    display: grid;
+    grid-template-columns: repeat(8 fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar_names sidebar_extra content content"
+    "footer footer footer footer";
+}
+
+.main_window .content .content_grid .sidebar {
+
+    grid-area: "sidebar_names";
+}
+
+.main_window .content .content_grid .example {
+    color: white;
+    grid-area: "footer";
+}
+
+.main_window .content .content_grid .sidebar_element {
     color: #d4d7e2;
     padding-top: 0;
     font-size: large;
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
+    grid-area: 1 / 1;
 }
 
-td.main:hover {
+.main_window .background:hover {
     cursor: default;
 }
 
-td.sidebar:hover {
+.sidebar_element:hover {
     scale: 1.1;
+    color: #ffffff;
     cursor: default;
-}
-
-h1.title {
-    color: white;
-    margin: 10px 10px 0px 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    text-align: left;
-}
-
-h1.subtitle {
-    color: rgb(207, 207, 207);
-    margin: 0px 10px 10px 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    font-size: larger;
-    text-align: left;
-}
-
-p1 {
-    color: white;
-    margin: 0px 0px 0px 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    text-align: left;
-}
-
-p.insert_box {
-    color: white;
-    margin-left: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
-    text-align: left;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 5px;
-    padding: 10px 10px 10px 10px
-
-}
-
-div.gallery {
-    margin: 10px 10px 10px 10px;
-    border: 0px;
-    float: left;
-    width: 180px;
-}
-
-div.gallery:hover {
-    width:179px;
-}
-
-div.gallery img {
-    width: 100%;
-    height: auto;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 100;
-
 }
