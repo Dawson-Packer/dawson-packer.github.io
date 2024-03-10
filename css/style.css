@@ -2,21 +2,32 @@
 
 body {
     background-color: black;
-    /* background-image: url("../images/picture1.JPG") */
+}
+
+div.console {
+    text-align: left;
+    font-size: large;
+    color: #d4d7e2;
+    font-weight: 800;
+    font-family: monospace;
+    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
 }
 
 td.main {
-    color: #e1e1e1;
+    color: #d4d7e2;
     font-size: large;
-    text-shadow: 0 0 5px #e1e1e1, 0 0 10px #e1e1e1, 0 0 20px #e1e1e1, 0 0 30px #e1e1e1
+    font-weight: 600;
+    font-family: monospace;
+    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
 
 }
 
 td.sidebar {
-    color: #e1e1e1;
+    color: #d4d7e2;
     padding-top: 0;
     font-size: large;
-    text-shadow: 0 0 5px #e1e1e1, 0 0 10px #e1e1e1, 0 0 20px #e1e1e1, 0 0 30px #e1e1e1
+    font-family: monospace;
+    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
 }
 
 td.main:hover {
