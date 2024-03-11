@@ -1,6 +1,8 @@
 @charset "utf-8";
 
-table:hover {
+
+
+/* table:hover {
     scale: 1.01;
 }
 
@@ -10,7 +12,7 @@ table:hover {
 
 td:hover {
     scale: 1.01;
-} */
+}
 
 table.invisible {
     border: 0px;
@@ -155,4 +157,4 @@ div.desc {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 100;
 
-}
+} */
