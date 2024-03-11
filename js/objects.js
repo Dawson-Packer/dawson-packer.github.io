@@ -1,6 +1,6 @@
 class SidebarObject {
     #name = "null";
-    #type = "empty"; // Can be empty, text, executable, or folder
+    #type = "empty"; // Can be empty, text, executable, upFolder, or folder
     #permissionLevel = 99;
 
     constructor(name, type, permissionLevel) {
@@ -43,7 +43,7 @@ export class TextFileObject extends SidebarObject {
 
 class ReturnFolderObject extends SidebarObject {
     constructor(referenceObject) {
-        super("../", "folder", 0);
+        super("../", "upFolder", 0);
         this.object = referenceObject;
     }
 }
@@ -51,11 +51,11 @@ class ReturnFolderObject extends SidebarObject {
 export class FolderObject extends SidebarObject {
     #num_items = 0;
     #items = [
-        new SidebarObject("", "text", 0),
-        new SidebarObject("", "text", 0),
-        new SidebarObject("", "text", 0),
-        new SidebarObject("", "text", 0),
-        new SidebarObject("", "text", 0)
+        new SidebarObject("", "empty", 0),
+        new SidebarObject("", "empty", 0),
+        new SidebarObject("", "empty", 0),
+        new SidebarObject("", "empty", 0),
+        new SidebarObject("", "empty", 0)
     ];
     #path = "";
 
@@ -87,6 +87,10 @@ export class FolderObject extends SidebarObject {
 
     getPath() {
         return this.#path;
+    }
+
+    getItem(index) {
+        return this.#items[index];
     }
 
     getItemName(index) {

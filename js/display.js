@@ -1,14 +1,73 @@
 import { root, apps } from './consts.js'
 
-var currentFolder;
-var currentFile;
+export var currentFolder;
+export var currentFile;
 
 export async function setRootFolder() {
     currentFolder = root;
     currentFile = root;
 }
 
+export async function setCurrentFolder(folder) {
+    currentFolder = folder;
+}
+
+export async function setCurrentFile(file) {
+    currentFile = file;
+}
+
 export async function reloadWindow() {
+
+    let background = document.getElementById("background");
+    let pathLine = "| > ";
+    pathLine = pathLine + currentFolder.getPath();
+    for (let i = 0; i < 82 - currentFolder.getPath().length; ++i) {
+        pathLine = pathLine + " ";
+    }
+    pathLine = pathLine + "|<br>";
+    background.innerHTML = ".――[ DAWS v0.1 ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――.<br>" +
+                           "|  Logged in as USER with permission level 1                                          |<br>" +
+                           "|=====================================================================================|<br>" +
+                           pathLine +
+                           "|―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――|<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "|                  |           |                                                      |<br>" +
+                           "'―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――'"
+
+
     loadSidebar();
 
 }
