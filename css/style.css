@@ -5,10 +5,13 @@ body {
 }
 
 .main_window {
+    margin-left: calc(50% - 43ch);
+    margin-right: calc(50% - 43ch);
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 86ch;
     grid-template-rows: 1fr;
-    place-items: center;
+    place-items: left;
+    grid-template-areas: "main_window";
 }
 
 div.console {
@@ -26,40 +29,76 @@ div.console {
     font-weight: 600;
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
-    grid-area: 1 / 1;
+    grid-area: main_window;
 }
 
 .main_window .content {
-    grid-area: 1 / 1;
+    grid-area: main_window;
 }
 
 .main_window .content .content_grid {
     display: grid;
-    grid-template-columns: repeat(8 fr);
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 10ch 10ch 66ch;
+    grid-template-rows: 1fr;
     grid-template-areas: 
-    "header header header header"
-    "sidebar_names sidebar_extra content content"
-    "footer footer footer footer";
+    "sidebar-name sidebar-extra preview";
 }
 
 .main_window .content .content_grid .sidebar {
-
-    grid-area: "sidebar_names";
+    grid-area: sidebar-name;
+    margin-top: 10ch;
 }
 
-.main_window .content .content_grid .example {
-    color: white;
-    grid-area: "footer";
+.main_window .content .content_grid .sidebar .sidebar_list {
+    display: grid;
+    grid-template-columns: 16ch;
+    grid-template-rows: repeat(8, 5ch);
+    grid-template-areas:
+        "sidebar0"
+        "sidebar1"
+        "sidebar2"
+        "sidebar3"
+        "sidebar4"
+        "sidebar5"
+        "sidebar6"
+        "sidebar7"
+        "sidebar8"
+        "sidebar9"
+        "sidebar10"
+        "sidebar11"
+        "sidebar12"
+        "sidebar13"
+        "sidebar14"
+        "sidebar15";
 }
 
-.main_window .content .content_grid .sidebar_element {
+.main_window .content .content_grid .sidebar .sidebar_list .sidebar_element {
     color: #d4d7e2;
     padding-top: 0;
     font-size: large;
+    font-weight: 600;
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
-    grid-area: 1 / 1;
+}
+
+.sidebar0 {
+    grid-area: sidebar0;
+}
+
+.sidebar1 {
+    grid-area: sidebar1;
+}
+
+.sidebar2 {
+    grid-area: sidebar2;
+}
+
+.sidebar3 {
+    grid-area: sidebar3;
+}
+
+.sidebar4  {
+    grid-area: sidebar4;
 }
 
 .main_window .background:hover {
