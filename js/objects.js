@@ -50,6 +50,7 @@ class ReturnFolderObject extends SidebarObject {
 
 export class FolderObject extends SidebarObject {
     #num_items = 0;
+    #num_lines = 0;
     #items = [
         new SidebarObject("", "empty", 0),
         new SidebarObject("", "empty", 0),
@@ -61,6 +62,7 @@ export class FolderObject extends SidebarObject {
 
     constructor(name, permissionLevel, parent) {
         super(name, "folder", permissionLevel);
+        this.contents = [];
         if (parent != 0) {
             console.log(name);
             console.log("ran nonzero");
@@ -73,6 +75,11 @@ export class FolderObject extends SidebarObject {
             this.#path = this.getName() + "/";
         }
         console.log(this.getPath());
+    }
+
+    add_line(line) {
+        this.contents[this.#num_lines] = line;
+        this.#num_lines = this.#num_lines + 1;
     }
 
     addItem(object) {

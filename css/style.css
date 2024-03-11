@@ -39,15 +39,26 @@ div.console {
 .main_window .content .content_grid {
     display: grid;
     margin-top: 2ch;
-    grid-template-columns: 2ch 10ch 10ch 66ch;
+    grid-template-columns: 2ch 10ch 10ch 18ch 66ch;
     grid-template-rows: 1fr;
     grid-template-areas: 
-    "spacer0 sidebar-name sidebar-extra preview";
+    "spacer0 sidebar-name sidebar-extra spacer1 preview";
 }
 
 .main_window .content .content_grid .sidebar {
     grid-area: sidebar-name;
     margin-top: 10ch;
+}
+
+.main_window .content .content_grid .preview {
+    grid-area: preview;
+    margin-top: 7ch;
+    color: #cccfda;
+    padding-top: 0;
+    font-size: 14pt;
+    font-weight: 600;
+    font-family: monospace;
+    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9;
 }
 
 .main_window .content .content_grid .sidebar .sidebar_list {

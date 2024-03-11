@@ -1,4 +1,4 @@
-import { currentFolder, currentFile, setCurrentFolder, reloadWindow } from "./display.js";
+import { sidebar_element_pressed } from "./display.js";
 
 export async function sidebar0_pressed() {
     console.log("Sidebar0 pressed");
@@ -23,19 +23,4 @@ export async function sidebar3_pressed() {
 export async function sidebar4_pressed() {
     console.log("Sidebar4 pressed");
     sidebar_element_pressed(4);
-}
-
-async function sidebar_element_pressed(index) {
-    if (currentFolder.getItem(index).getType() == "text") {
-        console.log("Opening a text file");
-    }
-    else if (currentFolder.getItem(index).getType() == "folder") {
-        console.log("Opening a folder");
-        setCurrentFolder(currentFolder.getItem(index));
-    }
-    else if (currentFolder.getItem(index).getType() == "upFolder") {
-        console.log("Going up!");
-        setCurrentFolder(currentFolder.getItem(index).object);
-    }
-    reloadWindow();
 }
