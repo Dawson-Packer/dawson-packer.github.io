@@ -1,5 +1,8 @@
+import { sidebar0_pressed, sidebar1_pressed,
+        sidebar2_pressed, sidebar3_pressed,
+        sidebar4_pressed } from './events.js'
 import { delay, dotdotdot, boot_text } from './boot_sequence.js'
-
+import { reloadWindow, setRootFolder } from './display.js';
 
 async function booting_text() {
 
@@ -23,46 +26,56 @@ async function setup() {
     let background = document.getElementById("background");
     background.innerHTML = ".――[ DAWS v0.1 ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――.<br>" +
                            "|  Logged in as USER with permission level 1                                          |<br>" +
+                           "|=====================================================================================|<br>" +
+                           "| > C:/                                                                               |<br>" +
                            "|―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――|<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
-                           "|                                                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
+                           "|               |              |                                                     |<br>" +
                            "'―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――'"
-    
+ 
+    // document.getElementById("sidebar0").onClick = function() {
+    //     test(document.getElementById("sidebar0"));
+    // };
+    document.getElementById("sidebar0").onclick = sidebar0_pressed;
+    document.getElementById("sidebar1").onclick = sidebar1_pressed;
+    document.getElementById("sidebar2").onclick = sidebar2_pressed;
+    document.getElementById("sidebar3").onclick = sidebar3_pressed;
+    document.getElementById("sidebar4").onclick = sidebar4_pressed;
+    setRootFolder();
+    reloadWindow();
 }
 
 

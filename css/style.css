@@ -16,7 +16,7 @@ body {
 
 div.console {
     text-align: left;
-    font-size: large;
+    font-size: 14pt;
     color: #d4d7e2;
     font-weight: 800;
     font-family: monospace;
@@ -38,10 +38,11 @@ div.console {
 
 .main_window .content .content_grid {
     display: grid;
-    grid-template-columns: 10ch 10ch 66ch;
+    margin-top: 2ch;
+    grid-template-columns: 2ch 10ch 10ch 66ch;
     grid-template-rows: 1fr;
     grid-template-areas: 
-    "sidebar-name sidebar-extra preview";
+    "spacer0 sidebar-name sidebar-extra preview";
 }
 
 .main_window .content .content_grid .sidebar {
@@ -52,7 +53,7 @@ div.console {
 .main_window .content .content_grid .sidebar .sidebar_list {
     display: grid;
     grid-template-columns: 16ch;
-    grid-template-rows: repeat(8, 5ch);
+    grid-template-rows: repeat(8, 4ch);
     grid-template-areas:
         "sidebar0"
         "sidebar1"
@@ -75,7 +76,7 @@ div.console {
 .main_window .content .content_grid .sidebar .sidebar_list .sidebar_element {
     color: #d4d7e2;
     padding-top: 0;
-    font-size: large;
+    font-size: 14pt;
     font-weight: 600;
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
