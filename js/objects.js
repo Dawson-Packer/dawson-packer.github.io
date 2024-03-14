@@ -41,7 +41,7 @@ export class TextFileObject extends SidebarObject {
     }
 }
 
-export class ExecutableObject extends SidebarObject {
+class ExecutableObject extends SidebarObject {
     num_lines = 0
     contents = []
     isON = false;
@@ -50,9 +50,9 @@ export class ExecutableObject extends SidebarObject {
         super(name, "executable", permissionLevel);
     }
 
-    // run() {
-
-    // }
+    setRunning(value) {
+        this.isON = value;
+    }
 }
 
 class ReturnFolderObject extends SidebarObject {
@@ -124,7 +124,7 @@ export class FolderObject extends SidebarObject {
 export class EmptyExe extends ExecutableObject {
     constructor() {
         super("Empty", 0);
-        this.isOn = true;
+        this.isOn = false;
     }
 
     isRunning() {
@@ -135,10 +135,14 @@ export class EmptyExe extends ExecutableObject {
 export class EnterPasswordExe extends ExecutableObject {
     constructor(name, permissionLevel) {
         super(name, permissionLevel);
-        this.isOn = true;
-        this.contents[0] = "/################\\";
-        this.contents[1] = "#:               #";
-        this.contents[2] = "\\#########[ OK ]#/";
+        this.isOn = false;
+        // this.contents[0] = "/################\\";
+        // this.contents[1] = "#:               #▊";
+        // this.contents[2] = "\\#########[ OK ]#/▊";
+        // this.contents[3] = " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇"
+        this.contents[0] = "┌────────────────┐";
+        this.contents[1] = "|:                 |";
+        this.contents[2] = "└──────────[ OK ]─┘";
         this.num_lines = 3;
     }
 

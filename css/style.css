@@ -5,8 +5,8 @@ body {
 }
 
 .main_window {
-    margin-left: calc(50% - 43ch);
-    margin-right: calc(50% - 43ch);
+    margin-left: calc(50% - 63ch);
+    /* margin-right: calc(50% - 43ch); */
     display: grid;
     grid-template-columns: 86ch;
     grid-template-rows: 1fr;
@@ -16,7 +16,7 @@ body {
 
 div.console {
     text-align: left;
-    font-size: 14pt;
+    font-size: 16pt;
     color: #d4d7e2;
     font-weight: 800;
     font-family: monospace;
@@ -25,7 +25,7 @@ div.console {
 
 .main_window .background {
     color: #d4d7e2;
-    font-size: large;
+    font-size: 16pt;
     font-weight: 600;
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
@@ -39,7 +39,7 @@ div.console {
 .main_window .content .content_grid {
     display: grid;
     margin-top: 2ch;
-    grid-template-columns: 2ch 10ch 10ch 18ch 66ch;
+    grid-template-columns: 2ch 10ch 10ch 30ch 66ch;
     grid-template-rows: 1fr;
     grid-template-areas: 
     "spacer0 sidebar-name sidebar-extra spacer1 preview";
@@ -47,15 +47,16 @@ div.console {
 
 .main_window .content .content_grid .sidebar {
     grid-area: sidebar-name;
-    margin-top: 10ch;
+    margin-top: 11ch;
+    margin-left: 1ch;
 }
 
 .main_window .content .content_grid .preview {
     grid-area: preview;
-    margin-top: 7ch;
+    margin-top: 10ch;
     color: #cccfda;
     padding-top: 0;
-    font-size: 14pt;
+    font-size: 16pt;
     font-weight: 600;
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9;
@@ -64,7 +65,7 @@ div.console {
 .main_window .content .content_grid .sidebar .sidebar_list {
     display: grid;
     grid-template-columns: 16ch;
-    grid-template-rows: repeat(8, 4ch);
+    grid-template-rows: repeat(8, 6ch);
     grid-template-areas:
         "sidebar0"
         "sidebar1"
@@ -87,7 +88,7 @@ div.console {
 .main_window .content .content_grid .sidebar .sidebar_list .sidebar_element {
     color: #d4d7e2;
     padding-top: 0;
-    font-size: 14pt;
+    font-size: 18pt;
     font-weight: 600;
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
@@ -121,4 +122,28 @@ div.console {
     scale: 1.1;
     color: #ffffff;
     cursor: default;
+}
+
+.main_window .exe_window {
+    grid-area: main_window;
+}
+
+.main_window .exe_window .content_grid {
+    display: grid;
+    margin-top: 40ch;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "content";
+    place-items: center;
+}
+
+.main_window .exe_window .content_grid .content {
+    color: #d4d7e2;
+    font-size: 16pt;
+    font-weight: 600;
+    font-family: monospace;
+    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
+    grid-area: content;
+    background-color: transparent;
 }
