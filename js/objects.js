@@ -41,6 +41,20 @@ export class TextFileObject extends SidebarObject {
     }
 }
 
+export class ExecutableObject extends SidebarObject {
+    num_lines = 0
+    contents = []
+    isON = false;
+
+    constructor(name, permissionLevel) {
+        super(name, "executable", permissionLevel);
+    }
+
+    // run() {
+
+    // }
+}
+
 class ReturnFolderObject extends SidebarObject {
     constructor(referenceObject) {
         super("../", "upFolder", 0);
@@ -102,5 +116,37 @@ export class FolderObject extends SidebarObject {
 
     getItemName(index) {
         return this.#items[index].getName();
+    }
+}
+
+// Specific Executable Classes
+
+export class EmptyExe extends ExecutableObject {
+    constructor() {
+        super("Empty", 0);
+        this.isOn = true;
+    }
+
+    isRunning() {
+        return this.isOn;
+    }
+}
+
+export class EnterPasswordExe extends ExecutableObject {
+    constructor(name, permissionLevel) {
+        super(name, permissionLevel);
+        this.isOn = true;
+        this.contents[0] = "/################\\";
+        this.contents[1] = "#:               #";
+        this.contents[2] = "\\#########[ OK ]#/";
+        this.num_lines = 3;
+    }
+
+    isRunning() {
+        return this.isON;
+    }
+
+    run(keys) {
+
     }
 }

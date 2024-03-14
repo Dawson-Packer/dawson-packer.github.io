@@ -1,13 +1,15 @@
-import { root, apps } from './consts.js'
+import { root, apps, emptyExe } from './consts.js'
 
 export var currentFolder;
 export var currentFile;
+export var currentExe;
 
 export async function sidebar_element_pressed(index) {
     let sidebarElement = currentFolder.getItem(index);
     if (sidebarElement.getType() == "text") {
         console.log("Opening a text file");
         setCurrentFile(sidebarElement);
+        setCurrentExe(emptyExe);
         // let preview_text = "";
         // for (let i = 0; i < sidebarElement.contents.length; ++i) {
         //     console.log(sidebarElement.contents[i]);
@@ -21,6 +23,7 @@ export async function sidebar_element_pressed(index) {
         console.log("Opening a folder");
         setCurrentFolder(sidebarElement);
         setCurrentFile(sidebarElement);
+        setCurrentExe(emptyExe);
         // let preview_text = "";
         // for (let i = 0; i < sidebarElement.contents.length; ++i) {
         //     console.log(sidebarElement.contents[i]);
@@ -32,6 +35,11 @@ export async function sidebar_element_pressed(index) {
         console.log("Going up!");
         setCurrentFolder(sidebarElement.object);
         setCurrentFile(sidebarElement.object);
+        setCurrentExe(emptyExe);
+    }
+    else if (sidebarElement.getType() == "executable") {
+        console.log("Running EXE");
+        setCurrentExe(sidebarElement.object);
     }
     reloadWindow();
 }
@@ -39,6 +47,7 @@ export async function sidebar_element_pressed(index) {
 export async function setRootFolder() {
     currentFolder = root;
     currentFile = root;
+    currentExe = emptyExe;
 }
 
 export async function setCurrentFolder(folder) {
@@ -47,6 +56,25 @@ export async function setCurrentFolder(folder) {
 
 export async function setCurrentFile(file) {
     currentFile = file;
+}
+
+export async function setCurrentExe(exe) {
+    currentExe = exe;
+    exeLoop();
+}
+
+async function exeLoop() {
+    while (currentExe.isRunning() == true) {
+        currentExe.run();
+        element = document.getElementById("exe_content");
+        content = "";
+        for (let i = 0; i < currentExe.num_lines; i++) {
+            content = content + currentExe.contents[i];
+            if (i < currentExe.num_lines - 1) {
+                content = content + "<br>";
+            }
+        }
+    }
 }
 
 export async function reloadWindow() {

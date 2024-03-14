@@ -1,4 +1,4 @@
-import { FolderObject, TextFileObject } from './objects.js'
+import { FolderObject, TextFileObject, EnterPasswordExe, EmptyExe } from './objects.js'
 
 // Folder declarations from top to bottom
 
@@ -28,10 +28,16 @@ aboutMe.add_line("studying computer science.");
 export const experience = new TextFileObject("experience.txt", 0);
 
 
+// Executable declarations
+export const emptyExe = new EmptyExe();
+export const enterPassword = new EnterPasswordExe("pswrd.exe", 0);
+
+
 
 // Adds files and folders to folders
 root.addItem(apps);
 root.addItem(projects);
 root.addItem(aboutMe);
 root.addItem(experience);
+apps.addItem(enterPassword);
 projects.addItem(aboutMe);
