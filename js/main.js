@@ -76,6 +76,7 @@ async function setup() {
     document.getElementById("sidebar4").onclick = sidebar4_pressed;
     setRootFolder();
     reloadWindow();
+    // document.getElementById("main_content").innerHTML = "hi";
 }
 
 

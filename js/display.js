@@ -89,25 +89,25 @@ export async function reloadWindow() {
                         //    "|                                                                                     |▊<br>" +
                            pathLine +
                            "|―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――|▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|――――――――――――――――――|           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|――――――――――――――――――|           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|――――――――――――――――――|           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|――――――――――――――――――|           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
                         //    "|                  |           |                                                      |<br>" +
                         //    "|                  |           |                                                      |<br>" +
                         //    "|                  |           |                                                      |<br>" +
@@ -122,9 +122,9 @@ export async function reloadWindow() {
                         //    "|                  |           |                                                      |<br>" +
                         //    "|                  |           |                                                      |<br>" +
                         //    "|                  |           |                                                      |<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
-                           "|                  |           |                                                      |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
+                           "|                                                                                     |▊<br>" +
                            "'―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――'▊<br>" +
                            " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇'"
 
@@ -139,7 +139,7 @@ function loadPreview() {
         console.log(currentFile.contents[i]);
         preview_text = preview_text + currentFile.contents[i] + "<br>";
     }
-    document.getElementById("preview").innerHTML = preview_text;
+    // document.getElementById("preview").innerHTML = preview_text;
 }
 
 function loadSidebar() {
@@ -150,10 +150,33 @@ function loadSidebar() {
         spaces += " ";
     }
     // document.getElementById("sidebar0").innerHTML = sidebar0_name + "<br>" + box_bottom;
+    for (let i = 0; i < 8; i++) loadSidebarElement(i);
+}
 
-    document.getElementById("sidebar0").innerHTML = currentFolder.getItemName(0);
-    document.getElementById("sidebar1").innerHTML = currentFolder.getItemName(1);
-    document.getElementById("sidebar2").innerHTML = currentFolder.getItemName(2);
-    document.getElementById("sidebar3").innerHTML = currentFolder.getItemName(3);
-    document.getElementById("sidebar4").innerHTML = currentFolder.getItemName(4);
+function loadSidebarElement(index) {
+    let element = document.getElementById("sidebar" + index);
+    let item = currentFolder.getItem(index);
+    let content = "";
+    if (item.getType() == "folder" || item.getType() == "upFolder") {
+        content += " __        <br>";
+        content += "|  '――――――.<br>";
+        content += "|         |<br>";
+        content += "|_________|<br><br>";
+        content += item.getName(); 
+    }
+    else if (item.getType() == "text") {
+        content += " _____ <br>";
+        content += "|==== \\<br>";
+        content += "|===  |<br>";
+        content += "|_____|<br><br>";
+        content += item.getName(); 
+    }
+    else if (item.getType() == "executable") {
+        content += ".☐☐☐======.<br>";
+        content += "| > exec  |<br>";
+        content += "|         |<br>";
+        content += "|_________|<br><br>";
+        content += item.getName(); 
+    }
+    element.innerHTML = content;
 }

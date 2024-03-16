@@ -18,6 +18,7 @@ export const projects = new FolderObject("PROJECTS", 0, root);
 
 // File declarations
 export const aboutMe = new TextFileObject("aboutme.txt", 0);
+// aboutMe.add_line("
 aboutMe.add_line("# Hi there!");
 aboutMe.add_line("");
 aboutMe.add_line("I'm Dawson Packer, an undergraduate student");

@@ -34,59 +34,24 @@ div.console {
 
 .main_window .content {
     grid-area: main_window;
+    margin-left: 10ch;
+    margin-top: 10ch;
 }
 
-.main_window .content .content_grid {
+.main_window .content .sidebar_grid {
     display: grid;
     margin-top: 2ch;
-    grid-template-columns: 2ch 10ch 10ch 30ch 66ch;
-    grid-template-rows: 1fr;
+    grid-template-columns: 32ch 32ch 32ch 32ch;
+    grid-template-rows: 32ch 32ch;
     grid-template-areas: 
-    "spacer0 sidebar-name sidebar-extra spacer1 preview";
+    "sidebar0 sidebar1 sidebar2 sidebar3"
+    "sidebar4 sidebar5 sidebar6 sidebar7";
+    place-items: center;
 }
 
-.main_window .content .content_grid .sidebar {
-    grid-area: sidebar-name;
-    margin-top: 11ch;
-    margin-left: 1ch;
-}
-
-.main_window .content .content_grid .preview {
-    grid-area: preview;
-    margin-top: 10ch;
-    color: #cccfda;
-    padding-top: 0;
-    font-size: 16pt;
-    font-weight: 600;
-    font-family: monospace;
-    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9;
-}
-
-.main_window .content .content_grid .sidebar .sidebar_list {
-    display: grid;
-    grid-template-columns: 16ch;
-    grid-template-rows: repeat(8, 6ch);
-    grid-template-areas:
-        "sidebar0"
-        "sidebar1"
-        "sidebar2"
-        "sidebar3"
-        "sidebar4"
-        "sidebar5"
-        "sidebar6"
-        "sidebar7"
-        "sidebar8"
-        "sidebar9"
-        "sidebar10"
-        "sidebar11"
-        "sidebar12"
-        "sidebar13"
-        "sidebar14"
-        "sidebar15";
-}
-
-.main_window .content .content_grid .sidebar .sidebar_list .sidebar_element {
+.main_window .content .sidebar_grid .sidebar_element {
     color: #d4d7e2;
+    text-align: center;
     padding-top: 0;
     font-size: 18pt;
     font-weight: 600;
@@ -112,6 +77,18 @@ div.console {
 
 .sidebar4  {
     grid-area: sidebar4;
+}
+
+.sidebar5  {
+    grid-area: sidebar5;
+}
+
+.sidebar6  {
+    grid-area: sidebar6;
+}
+
+.sidebar7  {
+    grid-area: sidebar7;
 }
 
 .main_window .background:hover {

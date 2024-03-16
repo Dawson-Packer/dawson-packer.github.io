@@ -143,7 +143,11 @@ export class EnterPasswordExe extends ExecutableObject {
         this.contents[0] = "┌────────────────┐";
         this.contents[1] = "|:                 |";
         this.contents[2] = "└──────────[ OK ]─┘";
-        this.num_lines = 3;
+        this.contents[0] = ".――――――――――――――――――.";
+        this.contents[1] = "|:                 |▊";
+        this.contents[2] = "'―――――――――――[ OK ]―'▊";
+        this.contents[3] = " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇'";
+        this.num_lines = 4;
     }
 
     isRunning() {
