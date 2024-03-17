@@ -55,14 +55,14 @@ div.console {
 .main_window .content {
     grid-area: main_window;
     /* margin-left: 1%; */
-    margin-top: 1em;
+    margin-top: 10%;
 }
 
 .main_window .content .sidebar_grid {
     display: grid;
     margin-top: 2ch;
-    grid-template-columns: 3em 14em 14em 14em 14em;
-    grid-template-rows: 32ch 32ch;
+    grid-template-columns: 4% 17.5% 17.5% 17.5% 17.5%;
+    grid-template-rows: 15% 17.5% 17.5%;
     grid-template-areas: 
     "spacer0 sidebar0 sidebar1 sidebar2 sidebar3"
     "spacer1 sidebar4 sidebar5 sidebar6 sidebar7";
