@@ -126,8 +126,14 @@ export async function reloadWindow() {
                             "|                                                                                     |▊<br>" +
                             "|                                                                                     |▊<br>" +
                             "'―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――'▊<br>";
+    if (navigator.platform == "Win32") {
+        backgroundContent += " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇";
+    }
+    else if (navigator.platform == "MacIntel") {
+        backgroundContent += " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇";
+    }
     console.log(navigator);
-                            " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇"
+                            
     background.innerHTML = backgroundContent
 
     loadPreview();
