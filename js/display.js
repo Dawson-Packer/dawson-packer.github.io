@@ -126,7 +126,7 @@ export async function reloadWindow() {
                            "|                                                                                     |▊<br>" +
                            "|                                                                                     |▊<br>" +
                            "'―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――'▊<br>" +
-                           " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇'"
+                           " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇"
 
     loadPreview();
     loadSidebar();
@@ -172,7 +172,7 @@ function loadSidebarElement(index) {
         content += item.getName(); 
     }
     else if (item.getType() == "executable") {
-        content += ".☐☐☐======.<br>";
+        content += ".☐☐☐======.<br>"; // TODO: <---- Make this Mac/Windows specific
         content += "| > exec  |<br>";
         content += "|         |<br>";
         content += "|_________|<br><br>";

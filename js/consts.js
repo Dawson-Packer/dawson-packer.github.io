@@ -12,6 +12,7 @@ root.add_line("on and am working on in the PROJECTS");
 root.add_line("directory.");
 export const apps = new FolderObject("APPS", 0, root);
 export const projects = new FolderObject("PROJECTS", 0, root);
+export const projectsRobotics = new FolderObject("ROBOTICS", 0, projects);
 
 
 
@@ -28,6 +29,9 @@ aboutMe.add_line("studying computer science.");
 
 export const experience = new TextFileObject("experience.txt", 0);
 
+export const vexU = new TextFileObject("vexu_competition.txt", 0);
+
+
 
 // Executable declarations
 export const emptyExe = new EmptyExe();
@@ -41,4 +45,5 @@ root.addItem(projects);
 root.addItem(aboutMe);
 root.addItem(experience);
 apps.addItem(enterPassword);
-projects.addItem(aboutMe);
+projects.addItem(projectsRobotics);
+projectsRobotics.addItem(vexU);
