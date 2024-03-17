@@ -55,15 +55,16 @@ div.console {
 .main_window .content {
     grid-area: main_window;
     /* margin-left: 1%; */
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .main_window .content .sidebar_grid {
     display: grid;
-    margin-top: 2ch;
+    /* margin-top: ; */
     grid-template-columns: 4% 17.5% 17.5% 17.5% 17.5%;
-    grid-template-rows: 15% 17.5% 17.5%;
+    grid-template-rows: 60% 60%;
     grid-template-areas: 
+    /* "spacer2 spacer3 spacer4 spacer5 spacer6" */
     "spacer0 sidebar0 sidebar1 sidebar2 sidebar3"
     "spacer1 sidebar4 sidebar5 sidebar6 sidebar7";
     place-items: center;

@@ -69,11 +69,11 @@ async function setup() {
     // document.getElementById("sidebar0").onClick = function() {
     //     test(document.getElementById("sidebar0"));
     // };
-    document.getElementById("sidebar0").onclick = sidebar0_pressed;
-    document.getElementById("sidebar1").onclick = sidebar1_pressed;
-    document.getElementById("sidebar2").onclick = sidebar2_pressed;
-    document.getElementById("sidebar3").onclick = sidebar3_pressed;
-    document.getElementById("sidebar4").onclick = sidebar4_pressed;
+    document.getElementById("sidebarElement0").onclick = sidebar0_pressed;
+    document.getElementById("sidebarElement1").onclick = sidebar1_pressed;
+    document.getElementById("sidebarElement2").onclick = sidebar2_pressed;
+    document.getElementById("sidebarElement3").onclick = sidebar3_pressed;
+    document.getElementById("sidebarElement4").onclick = sidebar4_pressed;
     setRootFolder();
     reloadWindow();
     // document.getElementById("main_content").innerHTML = "hi";
