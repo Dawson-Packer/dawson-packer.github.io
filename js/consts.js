@@ -22,11 +22,18 @@ export const emptyText = new TextFileObject("null", 0);
 
 export const aboutMe = new TextFileObject("aboutme.txt", 0);
 // aboutMe.add_line("
-aboutMe.add_line("# Hi there!");
+aboutMe.add_line("<h2>👋 Hi there!</h2>");
 aboutMe.add_line("");
-aboutMe.add_line("I'm Dawson Packer, an undergraduate student");
-aboutMe.add_line("at the University of Alaska Anchorage");
-aboutMe.add_line("studying computer science.");
+aboutMe.add_line("I'm Dawson Packer, an undergraduate student at the");
+aboutMe.add_line("University of Alaska Anchorage studying Computer Science.<br>");
+aboutMe.add_line("I am a full-time student, in addition to working part-time at");
+aboutMe.add_line("a local firm as a software developer. In my free time, however,");
+aboutMe.add_line("I enjoy playing percussion in the Chugiak-Eagle River Community");
+aboutMe.add_line("Band and mountain biking with friends.<br>");
+aboutMe.add_line("Feel free to explore my website, I had fun making it! 😊");
+
+aboutMe.add_line("<pre>                                                              </pre>");
+aboutMe.setNumLines(16);
 
 export const experience = new TextFileObject("experience.txt", 0);
 experience.add_line("<h2>Work Experience</h2>");
@@ -40,10 +47,16 @@ experience.setNumLines(42);
 export const skills = new TextFileObject("skills.txt", 0);
 skills.add_line("<h2>Skills I've used in projects</h2>");
 
-skills.add_line("<table class=\"skillText\"><tr class=\"skillText\"><td class=\"skillText\"><img src=\"../images/python-logo.png\" width=36 alt=\"python logo\"><div>Python</div><div></div></td><td class=\"skillText\"><img src=\"../images/c_cpp-logo.svg\" width=42 alt=\"c/c++ logo\"><div>C/C++</div></td><td class=\"skillText\"><img src=\"../images/autocad-logo.svg\" width=38 alt=\"autocad logo\"><div>AutoCAD</div><div></div></td></tr></table>")
-skills.add_line("<div class=\"text\">Even more text</div>")
+skills.add_line("<table class=\"skillText\"><tr class=\"skillText\"><td class=\"skillText\"><img src=\"../images/python-logo.png\" width=36 alt=\"python logo\"><div>Python</div><div></div></td><td class=\"skillText\"><img src=\"../images/c_cpp-logo.svg\" width=42 alt=\"c/c++ logo\"><div>C/C++</div></td><td class=\"skillText\"><img src=\"../images/autocad-logo.svg\" width=38 alt=\"autocad logo\"><div>AutoCAD</div><div></div></td><td class=\"skillText\"><img src=\"../images/solidworks-logo.png\" width=38 alt=\"solidworks logo\"><div>SolidWorks</div><div></div></td></tr></table>")
+// skills.add_line("<div class=\"text\">Even more text</div>")
+skills.add_line("Starting my college career pursuing Mechanical Engineering meant");
+skills.add_line("that I had learned 2D and 3D modeling software, which was further");
+skills.add_line("reinforced by my internship at Taku Engineering. Since then,");
+skills.add_line("however, I have been learning and improving in Python and C/C++");
+skills.add_line("through the UAA Robotics club, my coursework, personal projects,");
+skills.add_line("and work opportunities.");
 skills.add_line("<pre>                                                              </pre>");
-skills.setNumLines(18);
+skills.setNumLines(19);
 
 export const trim = new TextFileObject("trim.txt", 0);
 trim.add_line("<h3>Tree-Ring IMager application (TRIM)</h3>");

@@ -182,10 +182,12 @@ async function loadTextOverlay() {
         for (let i = 0; i < 64 - currentFile.getName().length; i++) backgroundContent += "―";
         backgroundContent += ".<br>";
         console.log(currentFile.numLines());
-        for (let i = 0; i < currentFile.numLines(); i++) backgroundContent += "|                                                                      |<br>";
-           backgroundContent += "|                                                                      |<br>" +
-                                "|______________________________________________________________________|" +
-                                "</pre>";
+        for (let i = 0; i < currentFile.numLines(); i++) backgroundContent += "|                                                                      |▊<br>";
+           backgroundContent += "|                                                                      |▊<br>" +
+                                "|______________________________________________________________________|▊<br>";
+        if (navigator.platform == "Win32") backgroundContent += " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇";
+        else if (navigator.platform == "MacIntel") backgroundContent += " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇";
+        backgroundContent += "</pre>";
         document.getElementById("overlayBackground").innerHTML = backgroundContent;
                             let preview_text = "";
         for (let i = 0; i < currentFile.contents.length; ++i) {
