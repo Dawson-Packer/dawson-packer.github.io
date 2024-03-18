@@ -17,11 +17,14 @@ export const append_to_element = (element, text) => {
 
 export async function boot_text(element) {
     await delay(1000);
+    append_to_element(element, "<br>Starting disks. . .");
+    await delay(100);
+    append_to_element(element, "<br>All disks responded");
     append_to_element(element, "<br>Starting background task managers");
-    await delay(300);
+    await delay(100);
     append_to_element(element, "<br>Executing start-up tasks in order of priority");
-    await delay(700);
-    append_to_element(element, "<br>Checking priority buses for connections");
+    await delay(300);
+    append_to_element(element, "<br>Cleaning start-up cache");
     await delay(800);
     // append_to_element(element, "<br>PORT0 > Failed to respond<br>");
     // await delay(300);

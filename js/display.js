@@ -88,7 +88,7 @@ export async function reloadWindow() {
     }
     //-->   Logged in as USER with permission level 1                                          <--
     pathLine = pathLine + "|▊<br>";
-    let backgroundContent = ".――[ DAWS v0.1 ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――.<br>" +
+    let backgroundContent = ".――[ DAWS v1.0 ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――.<br>" +
                             // "|&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&|▊<br>" +
                             "|=====================================================================================|▊<br>" +
                             // "|                                                                                     |▊<br>" +
@@ -186,7 +186,7 @@ async function loadTextOverlay() {
            backgroundContent += "|                                                                      |▊<br>" +
                                 "|______________________________________________________________________|▊<br>";
         if (navigator.platform == "Win32") backgroundContent += " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇";
-        else if (navigator.platform == "MacIntel") backgroundContent += " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇";
+        else if (navigator.platform == "MacIntel") backgroundContent += " ▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇'";
         backgroundContent += "</pre>";
         document.getElementById("overlayBackground").innerHTML = backgroundContent;
                             let preview_text = "";
