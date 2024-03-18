@@ -30,7 +30,9 @@ table {
     display: grid;
     grid-template-columns: 1fr 0.01fr;
     grid-template-rows: 1fr 0.01fr;
-    place-items: center;
+    /* place-items: center; */
+    align-items: start;
+    justify-items: center;
     grid-template-areas: "main_window empty0"
                          "empty1 corner";
 }
@@ -45,7 +47,8 @@ div.console {
 }
 
 .main_window .background {
-    color: #d4d7e2;
+    z-index: 1;
+    color: #d4d7e2; /* d4d7e2*/
     font-size: 16pt;
     font-weight: 600;
     font-family: monospace;
@@ -54,9 +57,10 @@ div.console {
 }
 
 .main_window .content {
+    z-index: 2;
     grid-area: main_window;
     /* margin-left: 1%; */
-    margin-top: 0%;
+    margin-top: 7%;
 }
 
 .main_window .content .sidebar_grid {
@@ -69,7 +73,9 @@ div.console {
     /* "spacer2 spacer3 spacer4 spacer5 spacer6" */
     "spacer0 sidebar0 sidebar1 sidebar2 sidebar3"
     "spacer1 sidebar4 sidebar5 sidebar6 sidebar7";
-    place-items: center;
+    /* place-items: center; */
+    align-items: start;
+    justify-items: center;
 }
 
 .main_window .content .sidebar_grid .sidebar_element {
@@ -135,7 +141,9 @@ div.console {
     grid-template-rows: 1fr;
     grid-template-areas: 
     "content";
-    place-items: center;
+    /* place-items: center; */
+    align-items: start;
+    justify-items: center;
 }
 
 .main_window .exe_window .content_grid .content {
@@ -149,18 +157,24 @@ div.console {
 }
 
 .main_window .overlay {
+    z-index: 3;
     grid-area: corner;
+    margin-top: 5%;
 }
 
 .main_window .overlay .overlayContentGrid {
     display: grid;
+    /* margin-bottom: 0%; */
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    place-items: center;
+    grid-template-rows: 4fr;
+    /* place-items: center; */
+    align-items: start;
+    justify-items: center;
     grid-template-areas: "content";
 }
 
 .main_window .overlay .overlayContentGrid .background {
+    z-index: 1;
     grid-area: content;
     color: #d4d7e2;
     font-size: 16pt;
@@ -168,11 +182,13 @@ div.console {
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
     grid-area: content;
-    background-color: transparent;
+    /* background-color: #0000007b; */
 }
 
 .main_window .overlay .overlayContentGrid .overlay_text {
+    z-index: 2;
     grid-area: content;
+    margin-top: 6.5%;
     color: #d4d7e2;
     font-size: 16pt;
     font-weight: 600;

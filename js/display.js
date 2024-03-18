@@ -151,10 +151,24 @@ export async function reloadWindow() {
 //     // document.getElementById("preview").innerHTML = preview_text;
 // }
 
+async function adjustColor(element, textColor, shadowColor) {
+    element.style.color = textColor;
+    element.style.textShadow = "0 0 5px " + shadowColor + ", 0 0 10px " + shadowColor + ", 0 0 20px " + shadowColor + ", 0 0 30px " + shadowColor;
+}
+
 async function loadTextOverlay() {
     if (currentFile.contents.length != 0) {
         document.getElementById("background").style.filter = "blur(1rem)";
         document.getElementById("main_content").style.filter = "blur(1rem)";
+        adjustColor(document.getElementById("background"), "#53545b", "#53545b");
+        adjustColor(document.getElementById("sidebar0"), "#53545b", "#53545b");
+        adjustColor(document.getElementById("sidebar1"), "#53545b", "#53545b");
+        adjustColor(document.getElementById("sidebar2"), "#53545b", "#53545b");
+        adjustColor(document.getElementById("sidebar3"), "#53545b", "#53545b");
+        adjustColor(document.getElementById("sidebar4"), "#53545b", "#53545b");
+        adjustColor(document.getElementById("sidebar5"), "#53545b", "#53545b");
+        adjustColor(document.getElementById("sidebar6"), "#53545b", "#53545b");
+        adjustColor(document.getElementById("sidebar7"), "#53545b", "#53545b");
         document.getElementById("overlay").style.gridArea = "main_window";
         let backgroundContent = "<pre>" +
                                 ".――[ " +
@@ -180,6 +194,16 @@ async function loadTextOverlay() {
         document.getElementById("overlay").style.gridArea = "corner";
         document.getElementById("overlayText").innerHTML = "";
         document.getElementById("overlayBackground").innerHTML = "";
+        adjustColor(document.getElementById("background"), "#d4d7e2", "#c4cde9");
+        adjustColor(document.getElementById("sidebar0"), "#d4d7e2", "#c4cde9");
+        adjustColor(document.getElementById("sidebar1"), "#d4d7e2", "#c4cde9");
+        adjustColor(document.getElementById("sidebar2"), "#d4d7e2", "#c4cde9");
+        adjustColor(document.getElementById("sidebar3"), "#d4d7e2", "#c4cde9");
+        adjustColor(document.getElementById("sidebar4"), "#d4d7e2", "#c4cde9");
+        adjustColor(document.getElementById("sidebar5"), "#d4d7e2", "#c4cde9");
+        adjustColor(document.getElementById("sidebar6"), "#d4d7e2", "#c4cde9");
+        adjustColor(document.getElementById("sidebar7"), "#d4d7e2", "#c4cde9");
+
     }
     
 }
@@ -191,7 +215,6 @@ function loadSidebar() {
     for (let i = 0; i < 12 - sidebar0_name.length; i++) {
         spaces += " ";
     }
-    // document.getElementById("sidebar0").innerHTML = sidebar0_name + "<br>" + box_bottom;
     for (let i = 0; i < 8; i++) loadSidebarElement(i);
 }
 
