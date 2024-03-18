@@ -40,6 +40,10 @@ export class TextFileObject extends SidebarObject {
         this.#num_lines = this.#num_lines + 1;
     }
 
+    setNumLines(num) {
+        this.#num_lines = num;
+    }
+
     numLines() {
         return this.#num_lines;
     }
