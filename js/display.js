@@ -1,4 +1,4 @@
-import { root, apps, emptyExe } from './consts.js'
+import { root, apps, emptyExe, emptyText } from './consts.js'
 import { delay } from './boot_sequence.js'
 
 export var currentFolder;
@@ -15,13 +15,13 @@ export async function sidebar_element_pressed(index) {
     else if (sidebarElement.getType() == "folder") {
         console.log("Opening a folder");
         setCurrentFolder(sidebarElement);
-        setCurrentFile(sidebarElement);
+        setCurrentFile(emptyText);
         setCurrentExe(emptyExe);
     }
     else if (sidebarElement.getType() == "upFolder") {
         console.log("Going up!");
         setCurrentFolder(sidebarElement.object);
-        setCurrentFile(sidebarElement.object);
+        setCurrentFile(emptyText);
         setCurrentExe(emptyExe);
     }
     else if (sidebarElement.getType() == "executable") {
@@ -34,7 +34,7 @@ export async function sidebar_element_pressed(index) {
 
 export async function setRootFolder() {
     currentFolder = root;
-    currentFile = root;
+    currentFile = emptyText;
     currentExe = emptyExe;
 }
 
@@ -136,18 +136,31 @@ export async function reloadWindow() {
                             
     background.innerHTML = backgroundContent
 
-    loadPreview();
+    // loadPreview();
+    loadTextOverlay();
     loadSidebar();
 
 }
 
-function loadPreview() {
+// function loadPreview() {
+//     let preview_text = "";
+//     for (let i = 0; i < currentFile.contents.length; ++i) {
+//         console.log(currentFile.contents[i]);
+//         preview_text = preview_text + currentFile.contents[i] + "<br>";
+//     }
+//     // document.getElementById("preview").innerHTML = preview_text;
+// }
+
+async function loadTextOverlay() {
+    if (currentFile.contents.length != 0)
+    document.getElementById("overlay").style.gridArea = "main_window";
+    else document.getElementById("overlay").style.gridArea = "corner";
     let preview_text = "";
     for (let i = 0; i < currentFile.contents.length; ++i) {
         console.log(currentFile.contents[i]);
         preview_text = preview_text + currentFile.contents[i] + "<br>";
     }
-    // document.getElementById("preview").innerHTML = preview_text;
+    document.getElementById("overlayText").innerHTML = preview_text;
 }
 
 function loadSidebar() {

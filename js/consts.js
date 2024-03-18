@@ -18,6 +18,8 @@ export const projectsRobotics = new FolderObject("ROBOTICS", 0, projects);
 
 
 // File declarations
+export const emptyText = new TextFileObject("null", 0);
+
 export const aboutMe = new TextFileObject("aboutme.txt", 0);
 // aboutMe.add_line("
 aboutMe.add_line("# Hi there!");

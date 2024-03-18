@@ -23,52 +23,6 @@ async function setup() {
 
     let console_paragraph = document.getElementById("console_paragraph");
     console_paragraph.innerHTML = "";
-    // let background = document.getElementById("background");
-    // background.innerHTML = ".――[ DAWS v0.1 ]――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――.<br>" +
-    //                        "|  Logged in as USER with permission level 1                                          |<br>" +
-    //                        "|=====================================================================================|<br>" +
-    //                        "| > C:/                                                                               |<br>" +
-    //                        "|―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――|<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "|                  |           |                                                     |<br>" +
-    //                        "'―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――'"
- 
-    // document.getElementById("sidebar0").onClick = function() {
-    //     test(document.getElementById("sidebar0"));
-    // };
     document.getElementById("sidebarElement0").onclick = sidebar0_pressed;
     document.getElementById("sidebarElement1").onclick = sidebar1_pressed;
     document.getElementById("sidebarElement2").onclick = sidebar2_pressed;

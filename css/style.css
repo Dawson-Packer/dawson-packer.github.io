@@ -28,10 +28,11 @@ table {
     margin-top: 2%;
     /* margin-right: calc(50% - 43ch); */
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 0.01fr;
+    grid-template-rows: 1fr 0.01fr;
     place-items: center;
-    grid-template-areas: "main_window";
+    grid-template-areas: "main_window empty0"
+                         "empty1 corner";
 }
 
 div.console {
@@ -138,6 +139,20 @@ div.console {
 }
 
 .main_window .exe_window .content_grid .content {
+    color: #d4d7e2;
+    font-size: 16pt;
+    font-weight: 600;
+    font-family: monospace;
+    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
+    grid-area: content;
+    background-color: transparent;
+}
+
+.main_window .overlay {
+    grid-area: corner;
+}
+
+.main_window .overlay .overlay_text {
     color: #d4d7e2;
     font-size: 16pt;
     font-weight: 600;
