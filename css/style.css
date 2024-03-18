@@ -54,6 +54,7 @@ div.console {
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
     grid-area: main_window;
+    cursor: default;
 }
 
 .main_window .content {
@@ -86,6 +87,7 @@ div.console {
     font-weight: 600;
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
+    cursor: default;
 }
 
 .sidebar0 {
@@ -130,32 +132,6 @@ div.console {
     cursor: default;
 }
 
-.main_window .exe_window {
-    grid-area: main_window;
-}
-
-.main_window .exe_window .content_grid {
-    display: grid;
-    margin-top: 40ch;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "content";
-    /* place-items: center; */
-    align-items: start;
-    justify-items: center;
-}
-
-.main_window .exe_window .content_grid .content {
-    color: #d4d7e2;
-    font-size: 16pt;
-    font-weight: 600;
-    font-family: monospace;
-    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
-    grid-area: content;
-    background-color: transparent;
-}
-
 .main_window .overlay {
     z-index: 3;
     grid-area: corner;
@@ -182,7 +158,7 @@ div.console {
     font-family: monospace;
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
     grid-area: content;
-    /* background-color: #0000007b; */
+    cursor: default;
 }
 
 .main_window .overlay .overlayContentGrid .overlay_text {
@@ -196,4 +172,26 @@ div.console {
     text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
     grid-area: content;
     background-color: transparent;
+}
+
+.main_window .overlay .overlayContentGrid .closeButton {
+    z-index: 3;
+    grid-area: content;
+    margin-top: 1%;
+    margin-left: 75%;
+    color: #d4d7e2;
+    font-size: 16pt;
+    font-weight: 600;
+    font-family: monospace;
+    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
+    grid-area: content;
+    background-color: transparent;
+    cursor: default;
+
+}
+
+.closeButton:hover {
+    scale: 1.1;
+    /* font- */
+    /* cursor: default; */
 }

@@ -1,4 +1,4 @@
-import { sidebar0_pressed, sidebar1_pressed,
+import { closePreviewPressed, sidebar0_pressed, sidebar1_pressed,
         sidebar2_pressed, sidebar3_pressed,
         sidebar4_pressed } from './events.js'
 import { delay, dotdotdot, boot_text } from './boot_sequence.js'
@@ -28,6 +28,7 @@ async function setup() {
     document.getElementById("sidebarElement2").onclick = sidebar2_pressed;
     document.getElementById("sidebarElement3").onclick = sidebar3_pressed;
     document.getElementById("sidebarElement4").onclick = sidebar4_pressed;
+    document.getElementById("previewCloseButton").onclick = closePreviewPressed;
     setRootFolder();
     reloadWindow();
     // document.getElementById("main_content").innerHTML = "hi";

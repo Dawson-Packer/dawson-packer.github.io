@@ -1,4 +1,4 @@
-import { sidebar_element_pressed } from "./display.js";
+import { sidebar_element_pressed, closeFile } from "./display.js";
 
 export async function sidebar0_pressed() {
     console.log("Sidebar0 pressed");
@@ -23,4 +23,8 @@ export async function sidebar3_pressed() {
 export async function sidebar4_pressed() {
     console.log("Sidebar4 pressed");
     sidebar_element_pressed(4);
+}
+
+export async function closePreviewPressed() {
+    closeFile();
 }

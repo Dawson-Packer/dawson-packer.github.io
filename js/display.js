@@ -51,6 +51,11 @@ export async function setCurrentExe(exe) {
     exeLoop();
 }
 
+export async function closeFile() {
+    setCurrentFile(emptyText);
+    reloadWindow();
+}
+
 async function exeLoop() {
     if (currentExe.getName() == "Empty") { return; }
     else { currentExe.setRunning(true); }
