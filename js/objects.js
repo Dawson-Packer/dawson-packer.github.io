@@ -39,6 +39,10 @@ export class TextFileObject extends SidebarObject {
         this.contents[this.#num_lines] = line;
         this.#num_lines = this.#num_lines + 1;
     }
+
+    numLines() {
+        return this.#num_lines;
+    }
 }
 
 class ExecutableObject extends SidebarObject {

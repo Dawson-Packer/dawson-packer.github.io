@@ -152,7 +152,27 @@ div.console {
     grid-area: corner;
 }
 
-.main_window .overlay .overlay_text {
+.main_window .overlay .overlayContentGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    grid-template-areas: "content";
+}
+
+.main_window .overlay .overlayContentGrid .background {
+    grid-area: content;
+    color: #d4d7e2;
+    font-size: 16pt;
+    font-weight: 600;
+    font-family: monospace;
+    text-shadow: 0 0 5px #c4cde9, 0 0 10px #c4cde9, 0 0 20px #c4cde9, 0 0 30px #c4cde9;
+    grid-area: content;
+    background-color: transparent;
+}
+
+.main_window .overlay .overlayContentGrid .overlay_text {
+    grid-area: content;
     color: #d4d7e2;
     font-size: 16pt;
     font-weight: 600;

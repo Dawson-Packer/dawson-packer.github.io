@@ -152,15 +152,36 @@ export async function reloadWindow() {
 // }
 
 async function loadTextOverlay() {
-    if (currentFile.contents.length != 0)
-    document.getElementById("overlay").style.gridArea = "main_window";
-    else document.getElementById("overlay").style.gridArea = "corner";
-    let preview_text = "";
-    for (let i = 0; i < currentFile.contents.length; ++i) {
-        console.log(currentFile.contents[i]);
-        preview_text = preview_text + currentFile.contents[i] + "<br>";
+    if (currentFile.contents.length != 0) {
+        document.getElementById("background").style.filter = "blur(1rem)";
+        document.getElementById("main_content").style.filter = "blur(1rem)";
+        document.getElementById("overlay").style.gridArea = "main_window";
+        let backgroundContent = "<pre>" +
+                                ".――[ " +
+                                currentFile.getName() + " ]";
+        for (let i = 0; i < 64 - currentFile.getName().length; i++) backgroundContent += "―";
+        backgroundContent += ".<br>";
+        console.log(currentFile.numLines());
+        for (let i = 0; i < currentFile.numLines(); i++) backgroundContent += "|                                                                      |<br>";
+           backgroundContent += "|                                                                      |<br>" +
+                                "|______________________________________________________________________|" +
+                                "</pre>";
+        document.getElementById("overlayBackground").innerHTML = backgroundContent;
+                            let preview_text = "";
+        for (let i = 0; i < currentFile.contents.length; ++i) {
+            console.log(currentFile.contents[i]);
+            preview_text = preview_text + currentFile.contents[i] + "<br>";
+        }
+        document.getElementById("overlayText").innerHTML = preview_text;
     }
-    document.getElementById("overlayText").innerHTML = preview_text;
+    else {
+        document.getElementById("background").style.filter = "blur(0)";
+        document.getElementById("main_content").style.filter = "blur(0)";
+        document.getElementById("overlay").style.gridArea = "corner";
+        document.getElementById("overlayText").innerHTML = "";
+        document.getElementById("overlayBackground").innerHTML = "";
+    }
+    
 }
 
 function loadSidebar() {
