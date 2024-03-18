@@ -45,14 +45,68 @@ skills.add_line("<div class=\"text\">Even more text</div>")
 skills.add_line("<pre>                                                              </pre>");
 skills.setNumLines(18);
 
-export const vexU = new TextFileObject("vexu_competition.txt", 0);
+export const trim = new TextFileObject("trim.txt", 0);
+trim.add_line("<h3>Tree-Ring IMager application (TRIM)</h3>");
+trim.add_line("Skills:<br><table class=\"projectsSkillText\"><tr><td class=\"skillText\">Python</td></tr></table>");
+trim.add_line("Part of my job with UAA ENRI is developing an application to");
+trim.add_line("automate the tree core imaging process, where one would take");
+trim.add_line("many high-resolution images of a tree core sample along its");
+trim.add_line("entire length, and stitch the images together.<br>");
+trim.add_line("Prior to this project ENRI staff would have to manually take");
+trim.add_line("all the pictures,however my other coworkers and I are developing");
+trim.add_line("a solution with a Python application and an arduino-motor setup.");
+trim.add_line("We have alreadydeveloped a successful prototype, and are in the");
+trim.add_line("works of finalizing the product, fixing bugs, and improving");
+trim.add_line("features.");
+trim.add_line("<pre>                                                              </pre>");
+trim.setNumLines(23);
+
+export const aboutTheClub = new TextFileObject("about.txt", 0);
+aboutTheClub.add_line("<h3>UAA Iceberg Robotics</h3>");
+aboutTheClub.add_line("UAA Robotics is a student-led and student-driven team of ");
+aboutTheClub.add_line("students interested in STEM and robotics in particular.");
+aboutTheClub.add_line("The team consists of a range of majors, from Computer Science");
+aboutTheClub.add_line("to Mechanical Engineering, though we do not require one to");
+aboutTheClub.add_line("be a STEM major to join.<br>");
+aboutTheClub.add_line("The team is managed by a task-based system where leads");
+aboutTheClub.add_line("create tasks for members to contribute to. Our projects");
+aboutTheClub.add_line("are funded via fundraising, grants, and donors.<br>");
+aboutTheClub.add_line("I joined in the spring of 2023 as a mechanical-focused member.");
+aboutTheClub.add_line("This year I became Treasurer, and became involved with");
+aboutTheClub.add_line("the software side of the projects.");
+aboutTheClub.add_line("<pre>                                                              </pre>");
+aboutTheClub.setNumLines(18);
+
+export const vexU = new TextFileObject("vexu.txt", 0);
 vexU.add_line("<h2>VEX U Competition</h2>");
-// Place skills in boxes here
-vexU.add_line("At the start of the Fall 2023 semester, ")
-
+vexU.add_line("Skills:<br><table class=\"projectsSkillText\"><tr><td class=\"skillText\">C++</td></tr></table>");
+vexU.add_line("At the start of the Fall 2023 semester, the team");
+vexU.add_line("began working on two robots to compete in the Vex");
+vexU.add_line("University Competition. This competition involves");
+vexU.add_line("building and programming two robots within design");
+vexU.add_line("specifications to compete in autonomous and driver-");
+vexU.add_line("controlled matches against other university teams.<br>");
+vexU.add_line("Following the build phase in the fall, we have competed");
+vexU.add_line("in two competitions, a remote event we hosted in January");
+vexU.add_line("and the Purdue SigBOTs Slam in Indiana in February");
+vexU.add_line("We placed well in both events, winning our remote competition");
+vexU.add_line("and placing 12th out of 31 teams in Indiana.<br>");
+// vexU.add_line("")
 vexU.add_line("<pre>                                                              </pre>");
-vexU.setNumLines(20);
+vexU.setNumLines(25);
 
+export const coffeeBot = new TextFileObject("coffeebot.txt", 0);
+coffeeBot.add_line("<h2>CoffeeBot Project</h2>")
+coffeeBot.add_line("Skills:<br><table class=\"projectsSkillText\"><tr><td class=\"skillText\">Python</td><td class=\"skillText\">C</td></tr></table>");
+coffeeBot.add_line("During the pandemic, a coffee shop inside UAA's Engineering");
+coffeeBot.add_line("& Industry Building (EIB) closed down permanently. Now, UAA");
+coffeeBot.add_line("Robotics is proposing and in the process of building a coffee-");
+coffeeBot.add_line("serving robotic arm to replace the closed shop.<br>");
+coffeeBot.add_line("The semester I joined saw a proof-of-concept model built out of");
+coffeeBot.add_line("3D-printed parts. Now, the team is at full swing developing a");
+coffeeBot.add_line("full-scale solution.")
+coffeeBot.add_line("<pre>                                                              </pre>");
+coffeeBot.setNumLines(21);
 
 // Executable declarations
 export const emptyExe = new EmptyExe();
@@ -68,4 +122,7 @@ root.addItem(experience);
 root.addItem(skills);
 apps.addItem(enterPassword);
 projects.addItem(projectsRobotics);
+projects.addItem(trim);
+projectsRobotics.addItem(aboutTheClub);
 projectsRobotics.addItem(vexU);
+projectsRobotics.addItem(coffeeBot);

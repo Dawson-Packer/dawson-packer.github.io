@@ -46,6 +46,13 @@ table.skillText {
     vertical-align: middle;
 }
 
+table.projectsSkillText {
+    border-collapse: separate;
+    border-spacing: 2rem;
+    margin-top: -1rem;
+    margin-left: -2rem;
+}
+
 tr.skillText {
     vertical-align: middle;
 
@@ -115,11 +122,11 @@ div.console {
     z-index: 2;
     grid-area: main_window;
     /* margin-left: 1%; */
-    margin-top: 7%;
+    margin-top: 6em;
 }
 
 .main_window .content .sidebar_grid {
-    margin-bottom: 13%;
+    /* margin-bottom: 13%; */
     display: grid;
     /* margin-top: ; */
     grid-template-columns: 6% 20% 20% 20% 20%;
