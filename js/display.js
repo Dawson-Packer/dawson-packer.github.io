@@ -174,6 +174,7 @@ async function loadTextOverlay() {
         adjustColor(document.getElementById("sidebar5"), "#53545b", "#53545b");
         adjustColor(document.getElementById("sidebar6"), "#53545b", "#53545b");
         adjustColor(document.getElementById("sidebar7"), "#53545b", "#53545b");
+        document.getElementById("previewCloseButton").innerHTML = "Close X";
         document.getElementById("overlay").style.gridArea = "main_window";
         let backgroundContent = "<pre>" +
                                 ".――[ " +
@@ -208,7 +209,7 @@ async function loadTextOverlay() {
         adjustColor(document.getElementById("sidebar5"), "#d4d7e2", "#c4cde9");
         adjustColor(document.getElementById("sidebar6"), "#d4d7e2", "#c4cde9");
         adjustColor(document.getElementById("sidebar7"), "#d4d7e2", "#c4cde9");
-
+        document.getElementById("previewCloseButton").innerHTML = "";
     }
     
 }
